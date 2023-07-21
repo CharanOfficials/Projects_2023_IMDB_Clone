@@ -95,7 +95,7 @@ var searchApp = (function(){
                 const search = searchText.value
                 let newLength = search.length
                 if(newLength > prevLength){
-                    const apiUrl = "http://www.omdbapi.com/?t="+search+"&apikey=8e12db0b"
+                    const apiUrl = "https://www.omdbapi.com/?t="+search+"&apikey=8e12db0b"
                     fetch(apiUrl)
                     .then(response => response.json())
                     .then(data => {

@@ -14,7 +14,7 @@ var movieDetailsApp = (function(){
         }else{  
             // Show data if ID received from home page
             id = sessionStorage.getItem('detailsSetter')
-            const apiUrl = "http://www.omdbapi.com/?i="+id+"&apikey=8e12db0b"
+            const apiUrl = "https://www.omdbapi.com/?i="+id+"&apikey=8e12db0b"
             fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
