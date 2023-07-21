@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@500&display=swap');
+
+/* Overall frame size adjustment */
+*{
+    padding: 0;
+    margin: 0;
+}
+/* Overall properties */
+body{
+    font-family: 'Victor Mono', monospace;
+    background-color: rgb(252, 247, 247);
+}
+
+/* Search bar */
+
+/* Outer container */
+.header{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: antiquewhite;
+}
+/* title */
+.title{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    letter-spacing: 0.7rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+/* title home button */
+.title .bi{
+    font-size: 2rem;
+    z-index: 99999;
+    cursor: pointer;
+}
+/* search box outer container */
+.search_box_container{
+    height: 2rem;
+    width: 30rem;
+    border: 1px solid black;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 5rem;
+    padding-top: 0.3rem;
+}
+/* search bar input for text */
+.search_text{
+    width: 28rem;
+    height: 1.7rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-right: 0.4rem;
+    margin-left: 0.5rem;
+}
+/* search bar button */
+.search_button{
+    width: 5.2rem;
+    margin-top: -0.4rem;
+    height: 2.5rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5rem;
+    padding: 0.2rem 0.2rem 0.2rem 0;
+}
+/* search bar search icon */
+.search_box_container .search{
+    font-size: 1.2rem;
+    margin-left: 0.7rem;
+    font-weight: bolder;
+}
+/* search bar clear button */
+.search_box_container .clear{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-right: 0.2rem;
+}
+
+/* Search results */
+.search_results_view_scroller{
+    max-height: 70vh;
+    width: 30rem;
+    overflow: scroll;
+    position: relative;
+    margin-top: 1rem;
+}
+/* to hide scroller */
+.search_results_view_scroller::-webkit-scrollbar{
+    display: none;
+}
+/* serch results list */
+.search_results_view > ul li{
+    list-style: none;
+    display: flex;
+    width: 29.8rem;
+    cursor: pointer;
+    background-color: rgb(231, 235, 234);
+}
+/* search results year and runtime data view */
+.data_year_runtime{
+    display: flex;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+/* search result poster */
+.result_img{
+    margin: 1rem;
+}
+/* search results container */
+.data_container{
+    margin: 1.5rem 1.5rem;
+    min-width: 17rem;
+}
+/* search results year data */
+.results_year{
+    margin-right: 2rem;
+}
+/* search results title */
+.data_title{
+    text-align: start;
+    width: 18rem;
+    word-wrap: break-word;
+}
+
+/* search results Fovourite icon */
+.favourite{
+    color: brown;
+    font-size: 1.8rem;
+    align-self: center;
+    z-index: 9999999;
+}
+/* search results redirect container to movie detail */
+.more_details{
+    /* background-color: aqua; */
+    width: 30rem;
+    height: 5rem;
+    position: absolute;
+    z-index: 99999;
+}
+/* MoviePage */
+
+/* Outer container */
+.movie_container{
+    width: 80vw;
+    height: 75vh;
+    margin: auto;
+    display: flex;
+}
+/* movie poster */
+.poster img{
+    border: 2px solid red;
+    max-height: 55vh;
+    margin-top: 2rem;
+    padding: 1rem;
+    box-shadow: 0.5rem 0.5rem 15px 5px brown;
+}
+/* movie details */
+.movie_details{
+    padding: 3rem;
+    font-size: 1.5rem;
+}
+/* movie details title */
+.movie_details h4{
+    padding-bottom: 1rem;
+}
+/* movie details data */
+.movie_details > h6{
+    font-weight: lighter;
+    letter-spacing: 3px;
+    word-wrap: break-word;
+    padding: 1rem 0;
+}
+/* Movie details plot data */
+.plot, h6{
+    display: flex;
+    font-weight: lighter;
+    padding: 0.6rem 0;
+}
+.data_title{
+    font-weight: lighter;
+}
+.search_results_view{
+    overflow: hidden;
+}
+/* To avoid page breakage */
+@media (max-width: 863px)  {
+    .movie_container{
+        flex-direction: column;
+        overflow: visible;
+    }
+    .movie_details{
+        padding: 5rem 0.2rem;
+        max-width: 30rem;
+    }
+    .poster img{
+        padding: auto;
+        margin: auto;
+    }
+}
+
+/* favourite List icon */
+
+/* outer container */
+.favourite_container{
+    display: flex;
+    width: 100vw;
+    height: 77vh;
+    /* border: 2px solid cyan; */
+    justify-content: center;
+    position: relative;
+    overflow: scroll;
+    justify-items: center;
+}
+/* inner container */
+.favourite_list{
+    background-color: transparent;
+    outline: none;
+    color: black
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+}
+.favourite_list:hover{
+    color: rgb(117, 125, 125);
+}
+/*  to hide scroller */
+.favourite_container::-webkit-scrollbar{
+    display: none;
+}
+.fav_list_item{
+    margin-top: 1rem;
+    list-style: none;
+}
+/* list styling */
+.favourite_container li{
+    min-width: 18rem;
+    min-height: 5rem;
+    border-bottom: 3px solid rgb(186, 107, 107);
+    padding: 0.5rem;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+/* fav title */
+.fav_title{
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+}
+/* fave details data */
+.fav_sub_details{
+    display: flex;
+    font-weight: lighter;
+    opacity: 0.6;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+/* for details internal spacing */
+.fav_sub_details p{
+    margin-right: 1rem;
+}
+/* to redirect to moviePage */
+.favourite_container .fav_clicked{
+    position: absolute;
+    width: 45rem;
+    min-height: 6rem;
+    z-index: 9999;
+    cursor: pointer;
+}
+/* to remove from favourite */
+#fav_icon{
+    position: absolute;
+    z-index: 9999;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* fav icon outer dive from spacing */
+.fav_div{
+    height: 2rem;
+}
+/* home button styling */
+#home:hover{
+    color: rgb(114, 175, 175)
+}

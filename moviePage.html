@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- title -->
+    <div class="title">
+        <p>IMDB CLONED MANIA</p>
+        <i id="home" class="bi bi-house-door"></i>
+    </div>
+    <main>
+        <!-- Movie details container -->
+        <div class="movie_container">
+            <div class="poster"><img class="poster_data" src="./blank.png"></div>
+            <div class="movie_details">
+                <h4 >Title:&nbsp;<span class="data_title"></span></h4>
+                <h6 class="released_date"></h6>
+                <h6 class="runtime">Runtime</h6>
+                <h6 class="genre">Genre:&nbsp;</h6> 
+                <div class="plot">
+                    <h6>Plot:&nbsp;</h6>
+                    <h6 class="plot_data">he world of high action cinema comes to a screeching crawl in this jaw-dropping series. Flames, water streams, exploding watermelons, and even a point blank paintball shot are no match for the Slow Mo Guys!</h6>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="moviePage.js"></script>
+    <script type="text/javascript">
+        movieDetailsApp.launchIndexApplication()
+    </script>
+</body>
+</html>
